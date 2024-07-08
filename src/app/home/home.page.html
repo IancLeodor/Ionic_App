@@ -1,0 +1,34 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-title>
+      Cocktail-uri
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchCocktails()" placeholder="Caută cocktail-uri"></ion-searchbar>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6" *ngFor="let cocktail of cocktails; let i = index">
+        <ion-item *ngIf="cocktails[i]" (click)="goToCocktailDetails(cocktails[i])">
+          <div class="cocktail-item">
+            <h2>{{ cocktails[i].strDrink }}</h2>
+            <ion-thumbnail>
+              <img [src]="cocktails[i].strDrinkThumb + '/preview'" alt="Thumbnail">
+            </ion-thumbnail>
+            <div class="description">
+              <p>{{ cocktails[i].strInstructions | slice:0:100 }}...</p>
+            </div>
+            <div class="ingredients">
+              <p>{{ cocktails[i].strIngredient1 }}</p>
+            </div>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="full" (click)="reloadCocktails()">Reîncarcă Cocktail-uri</ion-button>
+</ion-content>

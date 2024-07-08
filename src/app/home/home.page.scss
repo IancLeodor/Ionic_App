@@ -1,0 +1,89 @@
+ion-thumbnail {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+  }
+  
+  ion-item {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  ion-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cocktail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cocktail-item h2 {
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .description {
+    margin-top: 10px;
+  }
+  
+  .ingredients {
+    margin-top: 5px;
+    font-style: italic;
+  }
+  ion-content {
+    // --background: #0b1339; // Înlocuiește #f2f2f2 cu culoarea dorită
+  }
+  ion-content {
+    // --background: linear-gradient(to bottom, #2778c8, #383f55);
+  }
+  ion-item {
+    // --background: #454bf6; // Înlocuiește #ffffff cu culoarea dorită pentru fundal
+    --border-radius: 10px; // Adaugă colțuri rotunjite
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Adaugă o umbră subtilă
+    margin-bottom: 20px; // Adaugă spațiu între elemente
+  }
+  ion-item {
+    --background: #061632; // Înlocuiește #333333 cu o culoare închisă pentru contrast
+    --border-radius: 10px;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    // color: #1c085b; // Setează culoarea textului la alb
+  }
+  
+  ion-thumbnail {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+  }
+  
+  .cocktail-item h2 {
+    margin-bottom: 10px;
+    color: #ffffff; // Schimbă culoarea textului pentru nume la alb
+  }
+  
+  .description {
+    margin-top: 10px;
+    color: #ffffff; // Schimbă culoarea textului pentru descriere la alb
+  }
+  
+  .ingredients {
+    margin-top: 5px;
+    font-style: italic;
+    color: #ffffff; // Schimbă culoarea textului pentru ingrediente la alb
+  }
+  ion-title {
+    // color: #18083a; /* Schimbă culoarea textului titlului */
+  }
+  ion-searchbar {
+    // --background: #22017c; /* Culoarea de fundal a barei de căutare */
+    --color: #e7e6e6; /* Culoarea textului în bara de căutare */
+    --placeholder-color: #888; /* Culoarea textului placeholder */
+    --icon-color: #e7e7e7; /* Culoarea iconițelor din bara de căutare */
+    border: 1px solid #ccc; /* Adaugă o bordură, dacă dorești */
+    border-radius: 8px; /* Rotunjirea colțurilor */
+  }

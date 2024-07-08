@@ -1,0 +1,32 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ cocktail?.strDrink }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleCartItem()">
+        {{ isInCart ? 'Elimină din coș' : 'Adaugă în coș' }}
+      </ion-button>
+      <ion-button (click)="toggleFavorite()">
+        <ion-icon [name]="isFavorite ? 'heart' : 'heart-outline'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngIf="cocktail">
+    <img [src]="cocktail.strDrinkThumb + '/preview'" />
+    <ion-card-header>
+      <ion-card-title>{{ cocktail.strDrink }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ cocktail.strInstructions }}</p>
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li *ngFor="let ingredient of getIngredients()">{{ ingredient }}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

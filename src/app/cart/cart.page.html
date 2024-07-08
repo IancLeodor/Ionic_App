@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of cartItems" class="cart-item">
+      <ion-thumbnail slot="start">
+        <img [src]="item.strDrinkThumb" alt="{{ item.strDrink }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.strDrink }}</h2>
+        <p>{{ item.strIngredient1 }}</p>
+        <p *ngIf="item.ordered" class="order-info">
+          Order Time: {{ item.orderTime }}<br>
+          Delivery Time: {{ item.deliveryTime }}
+        </p>
+      </ion-label>
+      <ion-button *ngIf="!item.ordered" (click)="orderItem(item)" fill="outline" slot="end">Order</ion-button>
+      <ion-button *ngIf="item.ordered" (click)="cancelOrder(item)" color="danger" slot="end">Cancel</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
