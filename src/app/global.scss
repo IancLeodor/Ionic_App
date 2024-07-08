@@ -1,0 +1,102 @@
+:root {
+  --ion-color-light-background: #f2f2f2;
+  --ion-color-light-text: #000000;
+  --ion-color-dark-background: #061632;
+  --ion-color-dark-text: #ffffff;
+
+  --ion-color-primary: #3880ff;
+  --ion-color-danger: #271f7f;
+}
+
+body {
+  --ion-background-color: var(--ion-color-light-background);
+  --ion-text-color: var(--ion-color-light-text);
+}
+
+body.dark {
+  --ion-background-color: var(--ion-color-dark-background);
+  --ion-text-color: var(--ion-color-dark-text);
+}
+
+ion-content {
+  --background: var(--ion-background-color);
+  color: var(--ion-text-color);
+}
+
+ion-toolbar {
+  --background: var(--ion-background-color);
+  --color: var(--ion-text-color);
+  padding: 10px 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Linia de delimitare */
+}
+
+ion-title {
+  color: var(--ion-text-color);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+ion-searchbar {
+  --background: var(--ion-background-color);
+  --color: var(--ion-text-color);
+  --placeholder-color: #888;
+  --icon-color: #666;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+ion-item {
+  --background: var(--ion-background-color);
+  --color: var(--ion-text-color);
+  --border-radius: 10px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+ion-item:hover {
+  transform: translateY(-5px);
+}
+
+.cocktail-item h2 {
+  color: var(--ion-text-color);
+}
+
+.cocktail-item .description {
+  color: var(--ion-text-color);
+}
+
+.cocktail-item .ingredients {
+  color: var(--ion-text-color);
+  font-style: italic;
+}
+
+ion-thumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin: 10px auto;
+}
+
+ion-button {
+  --background: var(--ion-color-primary);
+  --color: #ffffff;
+}
+
+.toggle-bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--ion-color-toggle-bar-background);
+  margin: 0; /* Ensure no margins */
+}
+
+body.light .toggle-bar {
+  --ion-color-toggle-bar-background: #cccccc;
+}
+
+body.dark .toggle-bar {
+  --ion-color-toggle-bar-background: #333333;
+}

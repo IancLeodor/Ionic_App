@@ -1,0 +1,24 @@
+<ion-footer *ngIf="showNavBar">
+  <ion-toolbar>
+    <div class="nav-buttons">
+      <ion-button (click)="navigateTo('home')">
+        <ion-icon name="home"></ion-icon>
+        <div class="nav-label">Home</div>
+      </ion-button>
+      
+      <ion-button (click)="navigateTo('favorites')">
+        <ion-icon name="heart"></ion-icon>
+        <div class="nav-label">Favorites</div>
+      </ion-button>
+      <ion-button (click)="navigateTo('cart')">
+        <ion-icon name="cart"></ion-icon>
+        <div class="nav-label">Cart</div>
+      </ion-button>
+      <ion-button (click)="navigateTo('settings')">
+        <ion-icon name="settings"></ion-icon>
+        <div class="nav-label">Settings</div>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+  

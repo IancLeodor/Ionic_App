@@ -1,0 +1,24 @@
+/* global.scss */
+body {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+}
+
+body.dark {
+  --ion-background-color: #000000;
+  --ion-text-color: #ffffff;
+}
+
+/* Aplică stilurile pentru toate paginile */
+ion-content {
+  background-color: var(--ion-background-color);
+  color: var(--ion-text-color);
+}
+:root {
+  --ion-color-light-background: #ffffff;
+  --ion-color-light-text: #000000;
+  --ion-color-dark-container: #061633;
+  --ion-color-light-container: #99c8f5;
+
+  // Other color definitions...
+}

@@ -1,0 +1,54 @@
+ion-card {
+  margin: 8px; // reduce marginea pentru a face cardurile mai compacte
+}
+
+ion-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px; // reduce padding-ul pentru a micșora header-ul cardului
+}
+
+ion-thumbnail {
+  display: block;
+  width: 100%;
+  padding-top: 56.25%; // aspect ratio de 16:9 pentru a menține proporțiile imaginii
+  position: relative;
+  overflow: hidden;
+}
+
+ion-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // ajustează imaginea pentru a umple containerul fără a distorsiona
+}
+
+.description {
+  margin-top: 4px; // reduce spațiul de deasupra descrierii
+  font-size: 14px; // reduce dimensiunea textului descrierii
+}
+
+.ingredients {
+  font-style: italic;
+  color: var(--ion-color-medium);
+  font-size: 12px; // reduce dimensiunea textului pentru ingrediente
+}
+
+.cocktail-title {
+  color: var(--ion-color-primary);
+  font-size: 16px; // reduce dimensiunea titlului
+}
+
+ion-button {
+  --padding-start: 0;
+  --padding-end: 0;
+  height: 24px; // reduce înălțimea butonului
+  width: 24px; // reduce lățimea butonului
+}
+
+ion-icon {
+  font-size: 16px; // reduce dimensiunea iconiței
+}
